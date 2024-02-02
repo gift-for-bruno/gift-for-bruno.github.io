@@ -1,1 +1,81 @@
-Hello World!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations!</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* background-size: cover; */
+            background-position: center;
+        }
+        .message {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 2rem;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body id="randomBackground" class="image">
+
+<div class="message">
+    <h1 class="text-4xl font-bold mb-4">Congratulations!</h1>
+    <p class="text-lg mb-4">Dear Friend,</p>
+    <p class="text-md mb-4">I'm thrilled to congratulate you with this special gift:</p>
+    <p class="text-md mb-4">A paraglider flight in Mürren!
+    <p class="text-md mb-4">Here's to soaring high and enjoying the breathtaking views.</p>
+    <p class="text-md mb-4">Can't wait to hear all about it!</p>
+    <p class="text-lg">Best wishes,</p>
+    <p class="font-bold">Pavels and Dana</p>
+</div>
+
+<script>
+    // List of images
+    const images = [
+        'img1.png',
+        'img2.png',
+        'img3.png',
+        'img4.png',
+        'img5.png',
+        'img6.png',
+        'img7.png',
+        'img8.png',
+        'img9.png',
+        'img10.png',
+        'img11.png'
+        // Add more image paths as needed
+    ];
+
+    // Function to set a random background image
+    function setRandomBackground() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        const selectedImage = images[randomIndex];
+        document.body.style.backgroundImage = `url(${selectedImage})`;
+    }
+
+    // Set the random background when the page loads
+    window.onload = setRandomBackground;
+</script>
+
+</body>
+</html>
